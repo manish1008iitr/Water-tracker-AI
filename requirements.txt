@@ -1,7 +1,9 @@
-langgraph 
+#LLM and AI agent framework
 langchain 
+langchain-groq
+
+#Environment_variables 
 python-dotenv
-langchain-groq 
 
 #backend 
 fastapi
@@ -9,3 +11,13 @@ uvicorn
 
 #Frontend 
 streamlit
+
+#Cli intercation 
+typer 
+
+# Database
+sqlalchemy==2.0.27
+sqlite-utils==3.35
+
+# Task Scheduling (For Reminders)
+apscheduler==3.10.4
