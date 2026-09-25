@@ -21,7 +21,7 @@ def create_table():
 def log_intake(user_id, intake_ml):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
-    date_today = datetime.today().strftime("%")
+    date_today = datetime.today().strftime("%Y-%m-%d")
     cursor.execute("""
         INSERT INTO water_intake (user_id, intake_ml, date) 
         VALUES (?,?,?) 
@@ -33,7 +33,7 @@ def log_intake(user_id, intake_ml):
 def get_intake_history(user_id):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
-    cursor.execute("SELECT intake_ml, date from water_intake  WHERE user_id = ?", user_id)
+    cursor.execute("SELECT intake_ml, date from water_intake WHERE user_id = ?", (user_id))
     records = cursor.fetchall()
     conn.close()
     return records
