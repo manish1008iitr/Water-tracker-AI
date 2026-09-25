@@ -1,0 +1,11 @@
+langgraph 
+langchain 
+python-dotenv
+langchain-groq 
+
+#backend 
+fastapi
+uvicorn
+
+#Frontend 
+streamlit
