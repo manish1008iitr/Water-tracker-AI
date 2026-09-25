@@ -23,6 +23,8 @@ class WaterIntakeAgent():
         You are a hydration assiastant. 
         The user has consumed {intake_ml} ml of water today. 
         Provide hydration status and suggest if they need to drink more water
+        Provide answer in small statements with clearly highlighting how water should be drunk 
+        and highlighting important recommendations (according to water consumed)
 """
         response = llm.invoke([HumanMessage(content = prompt)])
         return response.content
